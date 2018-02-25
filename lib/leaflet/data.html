@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Governorates');
+        data.addColumn('number', 'Total Population');
+        data.addRows([
+          ['Muscat', {v: 775878, f: '775,878'}],
+          ['Dhofar', {v:249729, f: '249,729'}],
+          ['Musandame', {v: 31425, f: '31,425'}],
+		  ['Ad-Dakhliya', {v: 326651, f: '326,651'}],
+		  ['Al Buraymi', {v: 72917, f: '72,917'}],
+		  ['Al-Batinah North', {v: 483582, f: '483,582'}],
+		  ['Al-Batinah South', {v: 289008, f: '289,008'}],
+		  ['Ash-Sharqiya North', {v: 162482, f: '162,482'}],
+		  ['Ash-Sharqiya South', {v: 188032, f: '188,032'}],
+		  ['Al Wusta', {v: 42111, f: '42,111'}],
+          ['Adh-Dhahirah', {v: 151664, f: '151,664'}]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '85%', height: '85%'});
+      }
+    </script>
+  </head>
+  <body>
+    <body style="background-color:#FAF8CC;">
+    <div id="table_div"></div>
+  </body>
+</html>
